@@ -396,6 +396,14 @@ def Source_about_callback(update, context):
                 [
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="source_back")
+                    InlineKeyboardButton(text="Help", callback_data="help_back"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Support", url="t.me/SiderzChat"),
+                    InlineKeyboardButton(text="Update", url="https://t.me/SiderzBot"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Details", url="t.me/SiderzInfo"),
                  ]
                 ]
             ),

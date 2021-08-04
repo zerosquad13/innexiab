@@ -92,7 +92,7 @@ buttons = [
     [
         InlineKeyboardButton(text="📜 Iɴꜰᴏʀᴍᴀᴛɪᴏɴ", callback_data="innexia_"),
         InlineKeyboardButton(
-            text="Bᴏᴛ Lɪꜱᴛ 🤖", url=f"https://t.me/SiderzBot/11"
+            text="about", callback_data="innexiabot_"),
         ),
     ],
     [
@@ -391,7 +391,36 @@ def innexia_about_callback(update, context):
                 disable_web_page_preview=False,
         )
 
+        
+@run_async
+def innexiabot_about_callback(update, context):
+    query = update.callback_query
+    if query.data == "innexiabot_":
+        query.message.edit_text(
+            text=""" info & About!
+            \n In here you can find what is Innexia and how to set her up!
+            \n click button for help!""",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                    InlineKeyboardButton(text="Back", callback_data="innexia_back"),
+                    InlineKeyboardButton(text="Help", callback_data="help_back"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Support", url="t.me/SiderzChat"),
+                    InlineKeyboardButton(text="Update", url="https://t.me/SiderzBot"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Details", url="t.me/SiderzInfo"),
+                 
+                 ]
+                ]
+            ),
+        )
 
+        
 @run_async
 def Source_about_callback(update, context):
     query = update.callback_query

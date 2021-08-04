@@ -87,13 +87,11 @@ buttons = [
         InlineKeyboardButton(text="👥 Gʀᴏᴜᴘ", url=f"t.me/SiderzInfo"),
         InlineKeyboardButton(
             text="Cʜᴀɴɴᴇʟ 🔔", url=f"https://t.me/SiderzBot"
-        ),
     ],
     [
         InlineKeyboardButton(text="📜 Iɴꜰᴏʀᴍᴀᴛɪᴏɴ", callback_data="innexia_"),
         InlineKeyboardButton(
             text="about", url=f"https://t.me/SiderzChat"),
-        ),
     ],
     [
         InlineKeyboardButton(text="💕 Sᴜᴍᴍᴏɴ Mᴇ 💕", url="http://t.me/Innexiabot?startgroup=true"),

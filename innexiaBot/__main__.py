@@ -84,7 +84,7 @@ buttons = [
             text="❔Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅꜱ ❔", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="👥 Gʀᴏᴜᴘ", callback_data="innexiabot_"),
+        InlineKeyboardButton(text="👥 Gʀᴏᴜᴘ", url=f"t.me/SiderzInfo"),
         InlineKeyboardButton(
             text="Cʜᴀɴɴᴇʟ 🔔", url=f"https://t.me/SiderzBot"
         ),
@@ -372,7 +372,7 @@ def innexia_about_callback(update, context):
                     InlineKeyboardButton(text="Help", callback_data="help_back"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/SiderzChat"),
+                    InlineKeyboardButton(text="bots", callback_data="innexiabot_"),
                     InlineKeyboardButton(text="Update", url="https://t.me/SiderzBot"),
                  ],
                  [

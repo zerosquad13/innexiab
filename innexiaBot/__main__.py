@@ -84,7 +84,7 @@ buttons = [
             text="❔Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅꜱ ❔", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="👥 Gʀᴏᴜᴘ", url=f"https://t.me/SiderzChat"),
+        InlineKeyboardButton(text="👥 Gʀᴏᴜᴘ", callback_data="innexiabot_"),
         InlineKeyboardButton(
             text="Cʜᴀɴɴᴇʟ 🔔", url=f"https://t.me/SiderzBot"
         ),
@@ -92,7 +92,7 @@ buttons = [
     [
         InlineKeyboardButton(text="📜 Iɴꜰᴏʀᴍᴀᴛɪᴏɴ", callback_data="innexia_"),
         InlineKeyboardButton(
-            text="about", callback_data="innexiabot_"),
+            text="about", url=f"https://t.me/SiderzChat"),
         ),
     ],
     [

@@ -21,13 +21,13 @@ def paste(update: Update, context: CallbackContext):
         return
 
     key = (
-        requests.post('https://hastebin.com/documents', json={"content": data})
+        requests.post('https://nekobin.com/api/documents', json={"content": data})
         .json()
         .get("result")
         .get("key")
     )
 
-    url = f"https://hastebin.com/{key}"
+    url = f"https://nekobin.com/{key}"
 
     reply_text = f"Nekofied to *Nekobin* : {url}"
 

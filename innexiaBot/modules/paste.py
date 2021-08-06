@@ -21,7 +21,7 @@ def paste(update: Update, context: CallbackContext):
         return
 
     key = (
-        requests.post("https://hastebin.com/documents", json={"content": data})
+        requests.post('https://hastebin.com/documents', json={"content": data})
         .json()
         .get("result")
         .get("key")

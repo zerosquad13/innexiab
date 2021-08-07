@@ -1,4 +1,4 @@
-# COPYRIGHT (C) 2021 @Autichrist AND @useless
+# COPYRIGHT (C) 2021 @useIes
 
 from telethon import events, Button, custom
 import re, os
@@ -7,40 +7,40 @@ from innexiaBot import telethn as tbot
 from innexiaBot import telethn as tgbot
 from innexiaBot import (SUPPORT_CHAT, OWNER_USERNAME)
 
-PHOTO = "https://telegra.ph/file/c78acfb14cedec2d23c48.jpg"
+PHOTO = "https://telegra.ph/file/00dca1590296efc1956e0.jpg"
 @register(pattern=("/alive"))
 async def awake(event):
-  koraXname = event.sender.first_name
-  koraX = f"Hello {koraXname}, I am innexia\n\n"
-  koraX += "🔸 I'm Working Properly\n\n"
-  koraX += "🔹 Innexia OS : 2.0 LATEST\n\n"
-  koraX += f"🔸 My Master {OWNER_USERNAME} ☺️\n\n"
-  koraX += "🔹 I'm Updated\n\n"
-  koraX += "🔸 Telethon : 1.19.5 latest\n\n"
-  koraX += "thank You for Add me Here"
-  BUTTON = [[Button.url("SUPPORT", f"https://t.me/{SUPPORT_CHAT}"), Button.url("DEVLOPER", f"https://t.me/{OWNER_USERNAME}")]]
-  await tbot.send_file(event.chat_id, PHOTO, caption=koraX,  buttons=BUTTON)
+  innexiaXname = event.sender.first_name
+  innexiaX = f"Hᴇʟʟᴏ {innexiaXname}, I Aᴍ Iɴɴᴇxɪᴀ\n"
+  innexiaX += "🔸 I Aᴍ Wᴏʀᴋɪɴɢ Pʀᴏᴘᴇʀʟʏ\n"
+  innexiaX += "🔹 Iɴɴᴇxɪᴀ Oꜱ : 2.0 Lᴀᴛᴇꜱᴛ\n"
+  innexiaX += f"🔸 Mʏ Mᴀꜱᴛᴇʀ {OWNER_USERNAME}\n"
+  innexiaX += "🔹 I'ᴍ Uᴘᴅᴀᴛᴇᴅ\n"
+  innexiaX += "🔸 Tᴇʟᴇᴛʜᴏɴ : 1.19.5 Lᴀᴛᴇꜱᴛ\n\n"
+  innexiaX += "Tʜᴀɴᴋ Yᴏᴜ Fᴏʀ Aᴅᴅ Mᴇ Hᴇʀᴇ"
+  BUTTON = [[Button.url("Sᴜᴘᴘᴏʀᴛ", f"https://t.me/{SUPPORT_CHAT}"), Button.url("Oᴡɴᴇʀ", f"https://t.me/{OWNER_USERNAME}")]]
+  await tbot.send_file(event.chat_id, PHOTO, caption=InnexiaX,  buttons=BUTTON)
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"KoraX")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"innexiaX")))
 async def callback_query_handler(event):
-# inline by kittu5588 🔥
-  kittu = [[Button.url("REPO", "https://github.com/MrSammyXD"), Button.url("REPO-USERBOT", "https://github.com/kora-network/korauserbot")]]
-  kittu +=[[Button.url("SUPPORT CHANNEL", "https://t.me/korateam"), Button.url("SUPPORT GROUP", "https://t.me/SUPPORT_CHAT")]]
-  kittu +=[[custom.Button.inline("ALIVE", data="kittu")]]
-  await event.edit(text=f"ALL DETAILS OF REPOS", buttons=kittu)
+# inline by @useIes 🔥
+  sammy = [[Button.url("REPO", "https://github.com/DarkCybers"), Button.url("REPO-INNEXIA", "https://github.com/DarkCybers/Innexia")]]
+  sammy +=[[Button.url("SUPPORT CHANNEL", "https://t.me/SiderzBot"), Button.url("SUPPORT GROUP", "https://t.me/SiderzChat")]]
+  sammy +=[[custom.Button.inline("ALIVE", data="sammy")]]
+  await event.edit(text=f"ALL DETAILS OF REPOS", buttons=sammy)
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"kittu")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"sammy")))
 async def callback_query_handler(event):
   global PHOTO
-  koraXname = event.sender.first_name
-  koraX = f" Hello {koraXname}, I'm innexia\n\n"
-  koraX += "🔸 I'm Working Properly\n\n"
-  koraX += "🔹 Innexia OS : 2.0 LATEST\n\n"
-  koraX += f"🔸 My Master {OWNER_USERNAME} ☺️\n\n"
-  koraX += "🔹 I'm Updated\n\n"
-  koraX += "🔸 Telethon : 1.19.5 latest\n\n"
-  koraX += "thank You for Add me Here"
-  BUTTON = [[Button.url("SUPPORT", f"https://t.me/{SUPPORT_CHAT}"), Button.url("DEVLOPER", f"https://t.me/{OWNER_USERNAME}")]]
-  await event.edit(text=koraX, buttons=BUTTONS)
+  innexiaXname = event.sender.first_name
+  innexiaX = f"Hᴇʟʟᴏ {innexiaXname}, I Aᴍ Iɴɴᴇxɪᴀ\n"
+  innexiaX += "🔸 I Aᴍ Wᴏʀᴋɪɴɢ Pʀᴏᴘᴇʀʟʏ\n"
+  innexiaX += "🔹 Iɴɴᴇxɪᴀ Oꜱ : 2.0 Lᴀᴛᴇꜱᴛ\n"
+  innexiaX += f"🔸 Mʏ Mᴀꜱᴛᴇʀ {OWNER_USERNAME}\n"
+  innexiaX += "🔹 I'ᴍ Uᴘᴅᴀᴛᴇᴅ\n"
+  innexiaX += "🔸 Tᴇʟᴇᴛʜᴏɴ : 1.19.5 Lᴀᴛᴇꜱᴛ\n\n"
+  innexiaX += "Tʜᴀɴᴋ Yᴏᴜ Fᴏʀ Aᴅᴅ Mᴇ Hᴇʀᴇ"
+  BUTTON = [[Button.url("Sᴜᴘᴘᴏʀᴛ", f"https://t.me/{SUPPORT_CHAT}"), Button.url("Oᴡɴᴇʀ", f"https://t.me/{OWNER_USERNAME}")]]
+  await event.edit(text=InnexiaX, buttons=BUTTONS)
 

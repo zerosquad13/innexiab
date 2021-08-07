@@ -3,6 +3,7 @@ import time
 import re
 from sys import argv
 from typing import Optional
+import random
 
 from innexiaBot import (
     ALLOW_EXCL,
@@ -46,6 +47,11 @@ from telegram.ext import (
 )
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
+
+
+PMSTICKER = (
+    "CAACAgUAAxkBAAEDNF5hDtOcwCZbbVIUtxhK6rnJeMfO1gACCgYAAsJTeVTY2gXrYP0PBSAE",
+)
 
 
 def get_readable_time(seconds: int) -> str:
@@ -204,7 +210,10 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
+            chat_id = update.effective_chat.id
             update.effective_message.reply_text(
+            temp = (random.choice(PMSTICKER))
+            context.bot.send_sticker(chat_id, sticker=temp) #message.bot.send_sticker(chat.id,
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,

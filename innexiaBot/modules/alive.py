@@ -2,7 +2,7 @@
 
 from telethon import events, Button, custom
 import re, os
-from InnexiaBot.events import register
+from innexiaBot.events import register
 from innexiaBot import telethn as tbot
 from innexiaBot import telethn as tgbot
 from innexiaBot import (SUPPORT_CHAT, OWNER_USERNAME)

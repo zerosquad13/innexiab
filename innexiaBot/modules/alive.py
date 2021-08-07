@@ -19,7 +19,7 @@ async def awake(event):
   innexiaX += "🔸 Tᴇʟᴇᴛʜᴏɴ : 1.19.5 Lᴀᴛᴇꜱᴛ\n\n"
   innexiaX += "Tʜᴀɴᴋ Yᴏᴜ Fᴏʀ Aᴅᴅ Mᴇ Hᴇʀᴇ"
   BUTTON = [[Button.url("Sᴜᴘᴘᴏʀᴛ", f"https://t.me/{SUPPORT_CHAT}"), Button.url("Oᴡɴᴇʀ", f"https://t.me/{OWNER_USERNAME}")]]
-  await tbot.send_file(event.chat_id, PHOTO, caption=InnexiaX,  buttons=BUTTON)
+  await tbot.send_file(event.chat_id, PHOTO, caption=innexiaX,  buttons=BUTTON)
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"innexiaX")))

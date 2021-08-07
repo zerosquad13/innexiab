@@ -211,9 +211,9 @@ def start(update: Update, context: CallbackContext):
 
         else:
             chat_id = update.effective_chat.id
-            update.effective_message.reply_text(
             temp = (random.choice(PMSTICKER))
             context.bot.send_sticker(chat_id, sticker=temp) #message.bot.send_sticker(chat.id,
+            update.effective_message.reply_text(
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,

@@ -8,38 +8,26 @@ from telegram.ext import CallbackContext, run_async
 @run_async
 def paste(update, context):
     args = context.args
-    BURL = "https://nekobin.com"
-    message = update.effective_message
+    BURL = "https://hastebin.com"
+    message = update.effective_message.encode("utf-8")
     if message.reply_to_message:
-        data = message.reply_to_message.text
+        data = message.reply_to_message.text.encode("utf-8")
     elif len(args) >= 1:
-        data = message.text.split(None, 1)[1]
+        data = message.text.split(None, 1)[1].encode("utf-8")
     else:
         message.reply_text("What am I supposed to do with this?!")
         return
 
-    r = requests.post(f"{BURL}/documents", data=data.encode("utf-8"))
+    r = requests.post(f"{BURL}/documents", data=data)
 
     if r.status_code == 404:
         update.effective_message.reply_text("Failed to reach nekoBin")
         r.raise_for_status()
 
     res = r.json()
-
-    if r.status_code != 200:
-        update.effective_message.reply_text(res["message"])
-        r.raise_for_status()
-
     key = res["key"]
-    if res["isUrl"]:
-        reply = "Shortened URL: {}/{}\nYou can view stats, etc. [here]({}/v/{})".format(
-            BURL, key, BURL, key
-        )
-    else:
-        reply = f"{BURL}/{key}"
-    update.effective_message.reply_text(
-        reply, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
-    )
+    update.effective_message.reply_text(f"Pasted To [HasteBin](https://HasteBin.com/{key})!")
+
 
 
 PASTE_HANDLER = DisableAbleCommandHandler("paste", paste)

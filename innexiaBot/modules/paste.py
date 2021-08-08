@@ -6,33 +6,39 @@ from telegram.ext import CallbackContext, run_async
 
 
 @run_async
-def paste(update: Update, context: CallbackContext):
+def paste(update, context):
     args = context.args
+    BURL = "https://del.dog"
     message = update.effective_message
-
     if message.reply_to_message:
         data = message.reply_to_message.text
-
     elif len(args) >= 1:
         data = message.text.split(None, 1)[1]
-
     else:
-        message.reply_text("What am I supposed to do with this?")
+        message.reply_text("What am I supposed to do with this?!")
         return
 
-    key = (
-        requests.post("https://nekobin.com/api/documents", json={'content': data})
-        .json()
-        .get("result")
-        .get("key")
-    )
+    r = requests.post(f"{BURL}/documents", data=data.encode("utf-8"))
 
-    url = f"https://nekobin.com/{key}"
+    if r.status_code == 404:
+        update.effective_message.reply_text("Failed to reach dogbin")
+        r.raise_for_status()
 
-    reply_text = f"Nekofied to *Nekobin* : {url}"
+    res = r.json()
 
-    message.reply_text(
-        reply_text, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
+    if r.status_code != 200:
+        update.effective_message.reply_text(res["message"])
+        r.raise_for_status()
+
+    key = res["key"]
+    if res["isUrl"]:
+        reply = "Shortened URL: {}/{}\nYou can view stats, etc. [here]({}/v/{})".format(
+            BURL, key, BURL, key
+        )
+    else:
+        reply = f"{BURL}/{key}"
+    update.effective_message.reply_text(
+        reply, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
     )
 
 

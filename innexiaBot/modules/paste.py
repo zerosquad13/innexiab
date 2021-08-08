@@ -9,7 +9,7 @@ from telegram.ext import CallbackContext, run_async
 def paste(update, context):
     args = context.args
     BURL = "https://hastebin.com"
-    message = update.effective_message.encode("utf-8")
+    message = update.effective_message.text.encode("utf-8")
     if message.reply_to_message:
         data = message.reply_to_message.text.encode("utf-8")
     elif len(args) >= 1:

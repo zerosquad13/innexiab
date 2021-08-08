@@ -8,7 +8,7 @@ from telegram.ext import CallbackContext, run_async
 @run_async
 def paste(update, context):
     args = context.args
-    BURL = "https://del.dog"
+    BURL = "https://nekobin.com"
     message = update.effective_message
     if message.reply_to_message:
         data = message.reply_to_message.text
@@ -21,7 +21,7 @@ def paste(update, context):
     r = requests.post(f"{BURL}/documents", data=data.encode("utf-8"))
 
     if r.status_code == 404:
-        update.effective_message.reply_text("Failed to reach dogbin")
+        update.effective_message.reply_text("Failed to reach nekoBin")
         r.raise_for_status()
 
     res = r.json()

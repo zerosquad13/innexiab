@@ -392,7 +392,7 @@ def innexia_about_callback(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
                 disable_web_page_preview=False,
-        )
+       )
 
    elif query.data == "aboutmanu_howto":
         query.message.edit_text(    

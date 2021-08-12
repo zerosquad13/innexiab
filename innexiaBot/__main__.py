@@ -498,9 +498,6 @@ def innexia_about_callback(update, context):
             ),
         )
         
-           parse_mode=ParseMode.MARKDOWN,
-           disable_web_page_preview=True,
-           reply_markup=InlineKeyboardMarkup(
 @run_async
 def innexiabot_about_callback(update, context):
     query = update.callback_query

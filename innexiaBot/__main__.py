@@ -86,7 +86,7 @@ buttons = [
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="innexia_"),
         InlineKeyboardButton(
-            text="Basic Help", callback_data="innexi_basichelp"),
+            text="Basic Help", callback_data="innexia_basichelp"),
     ],
     [
         InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ❔", callback_data="help_back"),

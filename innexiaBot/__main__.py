@@ -418,14 +418,13 @@ def innexia_about_callback(update, context):
 
     elif query.data == "innexia_notes":
         query.message.edit_text(
-            text=f"*Setting up notes*"
+            text=f"<b> Setting up notes</b>"
             f"\nYou can save message/media/audio or anything as notes"
             f"\nto get a note simply use # at the beginning of a word"
-            f"\n\n*Check Image*"
-            f"\nYou [can](https://telegra.ph/file/d868a081691f2243c19db.jpg) also set buttons for notes and filters (refer help menu)",
+            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 Back", callback_data="innexia_aboutmanu_howto")]]
+                [[InlineKeyboardButton(text="🔙 Back", callback_data="innexia_aboutmanu_spamrot")]]
             ),
         )
     elif query.data == "innexia_aboutmanu_spamprot":
@@ -454,7 +453,7 @@ def innexia_about_callback(update, context):
             "\n_ A button gets added to the welcome message for them to unmute themselves. This proves they aren't a bot! soft - restricts users ability to post media for 24 hours. strong - mutes on join until they prove they're not bots._",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 Back", callback_data="innexia_aboutmanu_howto")]]
+                [[InlineKeyboardButton(text="🔙 Back", callback_data="innexia_back")]]
             ),
         )
     elif query.data == "innexia_aboutmanu_tac":

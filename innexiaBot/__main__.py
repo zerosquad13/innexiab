@@ -387,17 +387,17 @@ def innexia_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Aᴅᴍɪɴ Sᴇᴛᴛɪɴɢs", callback_data="aboutmanu_permis"
+                            text="Aᴅᴍɪɴ Sᴇᴛᴛɪɴɢs", callback_data="innexia_aboutmanu_permis"
                         ),
                         InlineKeyboardButton(
-                            text="Aɴᴛɪ Sᴘᴀᴍ", callback_data="aboutmanu_spamprot"
+                            text="Aɴᴛɪ Sᴘᴀᴍ", callback_data="innexia_aboutmanu_spamprot"
                         ),
                     ],
                     [InlineKeyboardButton(text="🔙  Bᴀᴄᴋ", callback_data="innexia_back")],
                 ]
             ),
         )
-    elif query.data == "aboutmanu_credit":
+    elif query.data == "innexia_aboutmanu_credit":
         query.message.edit_text(
             text=f"*{dispatcher.bot.first_name} Is the redisigned version of Daisy and Naruto for the best performance.*"
             f"\n\nBased on [Saithama](https://github.com/AnimeKaizoku/SaitamaRobot) + [suzuya](https://github.com/Godzilla-0/Suzuya_ProBot)."
@@ -406,11 +406,11 @@ def innexia_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 Back", callback_data="aboutmanu_tac")]]
+                [[InlineKeyboardButton(text="🔙 Back", callback_data="innexia_aboutmanu_tac")]]
             ),
         )
 
-    elif query.data == "aboutmanu_permis":
+    elif query.data == "innexia_aboutmanu_permis":
         query.message.edit_text(
             text=f"<b> ｢ Admin Permissions 」</b>"
             f"\nTo avoid slowing down, {dispatcher.bot.first_name} caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), {dispatcher.bot.first_name} will only find out ~10 minutes later."
@@ -421,10 +421,10 @@ def innexia_about_callback(update, context):
             f"\n\nThe message very clearly says that you need these rights - <i>not {dispatcher.bot.first_name}.</i>",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 Back", callback_data="aboutmanu_howto")]]
+                [[InlineKeyboardButton(text="🔙 Back", callback_data="innexia_aboutmanu_howto")]]
             ),
         )
-    elif query.data == "aboutmanu_spamprot":
+    elif query.data == "innexia_aboutmanu_spamprot":
         query.message.edit_text(
             text="* ｢ Anti-Spam Settings 」*"
             "\n- /antispam <on/off/yes/no>: Change antispam security settings in the group, or return your current settings(when no arguments)."
@@ -450,10 +450,10 @@ def innexia_about_callback(update, context):
             "\n_ A button gets added to the welcome message for them to unmute themselves. This proves they aren't a bot! soft - restricts users ability to post media for 24 hours. strong - mutes on join until they prove they're not bots._",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 Back", callback_data="aboutmanu_howto")]]
+                [[InlineKeyboardButton(text="🔙 Back", callback_data="innexia_aboutmanu_howto")]]
             ),
         )
-    elif query.data == "aboutmanu_tac":
+    elif query.data == "innexia_aboutmanu_tac":
         query.message.edit_text(
             text=f"<b> ｢ Terms and Conditions 」</b>\n"
             f"\n<i>To Use This Bot, You Need To Read Terms and Conditions Carefully.</i>\n"
@@ -471,7 +471,7 @@ def innexia_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Credits", callback_data="aboutmanu_credit"
+                            text="Credits", callback_data="innexia_aboutmanu_credit"
                         ),
                         InlineKeyboardButton(text="Back", callback_data="innexia_back"),
                     ]

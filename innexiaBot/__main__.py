@@ -376,7 +376,7 @@ def innexia_about_callback(update, context):
         )
 
 
-  @run_async
+@run_async
 def innexiabot_about_callback(update, context):
     query = update.callback_query
     if query.data == "innexiabot_":

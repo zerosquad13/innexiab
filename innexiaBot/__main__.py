@@ -387,20 +387,17 @@ def innexia_about_callback(update, context):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                 [
-                    InlineKeyboardButton(text="Aᴅᴍɪɴ Sᴇᴛᴛɪɴɢ", callback_data="innexia_admin"),
-                    InlineKeyboardButton(text="Vc Tutorial", callback_data="innexia_vc"),
-                 ],
-                 [              
-                    InlineKeyBoardButton(text="Filter Tutorial", callback_data="innexia_filter"),
-                    InlineKeyBoardButton(text="Notes Tutorial", callback_data="innexia_notes"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="🔙  Bᴀᴄᴋ", callback_data="innexia_back"),
-                     
-                 ]
+                    [
+                        InlineKeyboardButton(
+                            text="Aᴅᴍɪɴ Sᴇᴛᴛɪɴɢs", callback_data="innexia_admin"
+                        ),
+                        InlineKeyboardButton(
+                            text="Aɴᴛɪ Sᴘᴀᴍ", callback_data="aboutmanu_spamprot"
+                        ),
+                    ],
+                    [InlineKeyboardButton(text="🔙  Bᴀᴄᴋ", callback_data="aboutmanu_")],
                 ]
-             ),  
+            ),
         )
     elif query.data == "innexia_admin":
         query.message.edit_text(

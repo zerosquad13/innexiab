@@ -86,7 +86,7 @@ buttons = [
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="innexia_"),
         InlineKeyboardButton(
-            text="ꜱᴜᴘ", callback_data="innexia_aboutmanu_howto"),
+            text="Basic Help", callback_data="innexi_basichelp"),
     ],
     [
         InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ❔", callback_data="help_back"),
@@ -375,11 +375,13 @@ def innexia_about_callback(update, context):
                 disable_web_page_preview=False,
         )
 
-    elif query.data == "innexia_aboutmanu_howto":
+    elif query.data == "innexia_basichelp":
         query.message.edit_text(
-            text=f"* ｢ BASIC HELP 」*"
-            f"\nIf You Can Also Add {dispatcher.bot.first_name} To Your Chats By Clicking [Here](http://t.me/{dispatcher.bot.username}?startgroup=true) And Selecting Chat. \n"
-            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [support](https://t.me/TG_BotZ).\n"
+            text=f"Here's basic Help regarding **How to use Me?**"
+            f"\n• Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
+            f"\n• After adding promote me manually with full rights for faster experience.\n"
+            f"\n• Than send `/admincache@InnexiaBot` in that chat to refresh admin list in My database.\n"
+            f"\n\n**All done now use below given button's to know about use!**\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -387,22 +389,31 @@ def innexia_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Aᴅᴍɪɴ Sᴇᴛᴛɪɴɢs", callback_data="innexia_aboutmanu_permis"
+                            text="Aᴅᴍɪɴ Sᴇᴛᴛɪɴɢ", callback_data="innexia_admin"
                         ),
                         InlineKeyboardButton(
-                            text="Aɴᴛɪ Sᴘᴀᴍ", callback_data="innexia_aboutmanu_spamprot"
+                            text="Vc Tutorial", callback_data="innexia_vc"
                         ),
+                        InlineKeyBoardButton(
+                            text="Filter Tutorial", callback_data="innexia_filter"
+                        ),
+                        InlineKeyBoardButton(
+                            text="Notes Tutorial", callback_data="innexia_notes"
                     ],
                     [InlineKeyboardButton(text="🔙  Bᴀᴄᴋ", callback_data="innexia_back")],
                 ]
             ),
         )
-    elif query.data == "innexia_aboutmanu_credit":
+    elif query.data == "innexia_admin":
         query.message.edit_text(
-            text=f"*{dispatcher.bot.first_name} Is the redisigned version of Daisy and Naruto for the best performance.*"
-            f"\n\nBased on [Saithama](https://github.com/AnimeKaizoku/SaitamaRobot) + [suzuya](https://github.com/Godzilla-0/Suzuya_ProBot)."
-            f"\n\n{dispatcher.bot.first_name}'s source code was written by InukaASiTH and Imjanindu"
-            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @{SUPPORT_CHAT}.",
+            text=f"*Let's make your group bit effective now*"
+            f"\nCongragulations, Daisy now ready to manage your group."
+            f"**Admin Tools**"
+            f"Basic Admin tools help you to protect and powerup your group."
+            f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
+            f"**Welcome**"
+            f"Lets set a welcome message to welcome new users coming to your group."
+            f"send `/setwelcome [message]` to set a welcome message!",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(

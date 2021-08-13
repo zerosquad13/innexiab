@@ -81,22 +81,16 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="❔Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅꜱ ❔", callback_data="help_back"),
+            text="➕️ ᴀᴅᴅ ʏᴏɴᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/InnexiaTestRoBot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="👥 Gʀᴏᴜᴘ", url=f"https://t.me/SiderzChat"),
+        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="innexia_"),
         InlineKeyboardButton(
-            text="Cʜᴀɴɴᴇʟ 🔔", url=f"https://t.me/SiderzBot"
+            text="ꜱᴜᴘ", callback_data="innexiabot_"),
         ),
     ],
     [
-        InlineKeyboardButton(text="📜 Iɴꜰᴏʀᴍᴀᴛɪᴏɴ", callback_data="innexia_"),
-        InlineKeyboardButton(
-            text="Bᴏᴛ", callback_data="innexiabot_"),
-        ),
-    ],
-    [
-        InlineKeyboardButton(text="💕 Sᴜᴍᴍᴏɴ Mᴇ 💕", url="http://t.me/Innexiabot?startgroup=true"),
+        InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ❔", callback_data="help_back"),
     ],
 ]
 

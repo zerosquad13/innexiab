@@ -375,7 +375,7 @@ def innexia_about_callback(update, context):
                 disable_web_page_preview=False,
         )
 
-     elif query.data == "aboutmanu_howto":
+    elif query.data == "aboutmanu_howto":
         query.message.edit_text(
             text=f"* ｢ BASIC HELP 」*"
             f"\nIf You Can Also Add {dispatcher.bot.first_name} To Your Chats By Clicking [Here](http://t.me/{dispatcher.bot.username}?startgroup=true) And Selecting Chat. \n"

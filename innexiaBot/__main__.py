@@ -389,10 +389,10 @@ def innexia_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Aᴅᴍɪɴ Sᴇᴛᴛɪɴɢs", callback_data="innexia_admin"
+                            text="Aᴅᴍɪɴ", callback_data="innexia_admin"
                         ),
                         InlineKeyboardButton(
-                            text="Aɴᴛɪ Sᴘᴀᴍ", callback_data="aboutmanu_spamprot"
+                            text="Notes", callback_data="innexia_notes"
                         ),
                     ],
                     [InlineKeyboardButton(text="🔙  Bᴀᴄᴋ", callback_data="aboutmanu_")],
@@ -404,10 +404,10 @@ def innexia_about_callback(update, context):
             text=f"*Let's make your group bit effective now*"
             f"\nCongragulations, Daisy now ready to manage your group."
             f"\n\n*Admin Tools*"
-            f"Basic Admin tools help you to protect and powerup your group."
+            f"\nBasic Admin tools help you to protect and powerup your group."
             f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
             f"\n\n*Welcome*"
-            f"Lets set a welcome message to welcome new users coming to your group."
+            f"\nLets set a welcome message to welcome new users coming to your group."
             f"send `/setwelcome [message]` to set a welcome message!",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -416,15 +416,13 @@ def innexia_about_callback(update, context):
             ),
         )
 
-    elif query.data == "innexia_aboutmanu_permis":
+    elif query.data == "innexia_notes":
         query.message.edit_text(
-            text=f"<b> ｢ Admin Permissions 」</b>"
-            f"\nTo avoid slowing down, {dispatcher.bot.first_name} caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), {dispatcher.bot.first_name} will only find out ~10 minutes later."
-            f"\n\nIF you want to update them immediately, you can use the /admincache command,thta'll force {dispatcher.bot.first_name} to check who the admins are again and their permissions"
-            f"\n\nIf you are getting a message saying:"
-            f"\n<Code>You must be this chat administrator to perform this action!</code>"
-            f"\nThis has nothing to do with {dispatcher.bot.first_name}'s rights; this is all about YOUR permissions as an admin. {dispatcher.bot.first_name} respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with {dispatcher.bot.first_name}. Similarly, to change {dispatcher.bot.first_name} settings, you need to have the Change group info permission."
-            f"\n\nThe message very clearly says that you need these rights - <i>not {dispatcher.bot.first_name}.</i>",
+            text=f"*Setting up notes*"
+            f"\nYou can save message/media/audio or anything as notes"
+            f"\nto get a note simply use # at the beginning of a word"
+            f"\n\n*Check Image*"
+            f"\nYou [can](https://telegra.ph/file/d868a081691f2243c19db.jpg) also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="🔙 Back", callback_data="innexia_aboutmanu_howto")]]

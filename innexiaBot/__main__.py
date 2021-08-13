@@ -377,11 +377,11 @@ def innexia_about_callback(update, context):
 
     elif query.data == "innexia_basichelp":
         query.message.edit_text(
-            text=f"Here's basic Help regarding **How to use Me?**"
+            text=f"Here's basic Help regarding *How to use Me?*"
             f"\n• Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
             f"\n• After adding promote me manually with full rights for faster experience.\n"
             f"\n• Than send `/admincache@InnexiaBot` in that chat to refresh admin list in My database.\n"
-            f"\n\n**All done now use below given button's to know about use!**\n"
+            f"\n\n*All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -403,10 +403,10 @@ def innexia_about_callback(update, context):
         query.message.edit_text(
             text=f"*Let's make your group bit effective now*"
             f"\nCongragulations, Daisy now ready to manage your group."
-            f"**Admin Tools**"
+            f"\n\n*Admin Tools*"
             f"Basic Admin tools help you to protect and powerup your group."
             f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
-            f"**Welcome**"
+            f"\n\n*Welcome*"
             f"Lets set a welcome message to welcome new users coming to your group."
             f"send `/setwelcome [message]` to set a welcome message!",
             parse_mode=ParseMode.MARKDOWN,

@@ -399,6 +399,7 @@ def innexia_about_callback(update, context):
                         ),
                         InlineKeyBoardButton(
                             text="Notes Tutorial", callback_data="innexia_notes"
+                        ),
                     ],
                     [InlineKeyboardButton(text="🔙  Bᴀᴄᴋ", callback_data="innexia_back")],
                 ]

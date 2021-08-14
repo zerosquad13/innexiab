@@ -439,23 +439,18 @@ def innexia_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton(
-                            text="Group", url="t.me/SiderzChat"
-                        ),
-                        InlineKeyboardButton(
-                            text="Channel", url="t.me/SiderzBot"
-                        ),
-                        InlineKeyboardButton(
-                            text="Channel", url="t.me/SiderzBot"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="Dev's", url="t.me/BotDevlopers"
-                        )
-                    ],
-                    [InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="innexia_basichelp")],
+                 [
+                    InlineKeyboardButton(text="Owner", url="t.me/useIes"),
+                    InlineKeyboardButton(text="Help", url="t.me/BotDevlopers"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Support", url="t.me/SiderzChat"),
+                    InlineKeyboardButton(text="Update", url="https://t.me/SiderzBot"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Back", callback_data="innexia_basichelp"),
+                 
+                 ]
                 ]
             ),
         )

@@ -214,9 +214,13 @@ def start(update: Update, context: CallbackContext):
             "[👋](https://telegra.ph/file/647cd4b88dad5350ad71d.gif)I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
-            parse_mode=ParseMode.HTML,
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Support", url="t.me/SiderzChat")]]
+            ),
         )
-
+        
 
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""

@@ -356,7 +356,7 @@ def innexia_about_callback(update, context):
     query = update.callback_query
     if query.data == "innexia_":
         query.message.edit_text(
-            text=""" <b> INNEXIA A bot to manage your groups with additional features!<b/>
+            text=""" **INNEXIA** A bot to manage your groups with additional features!
             \nHere's the basic help regarding use of Innexia.
             
             \nAlmost all modules usage defined in the help menu, checkout by sending `/help`
@@ -370,7 +370,7 @@ def innexia_about_callback(update, context):
                             text="Bᴜɢ'ꜱ", url="t.me/SiderzChat"
                         ),
                         InlineKeyboardButton(
-                            text="Bᴏᴛ Lɪꜱᴛ", url="t.me/SiderzBot/9"
+                            text="Bᴏᴛ Lɪꜱᴛ", url="t.me/SiderzBot/11"
                         ),
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="innexia_back")],
@@ -444,7 +444,7 @@ def innexia_about_callback(update, context):
     elif query.data == "innexia_support":
         query.message.edit_text(
             text="* Innexia support chats*"
-            "\nAdd to innexia your chat [here](http://t.me/{dispatcher.bot.username}?startgroup=true)",
+            "\nJoin Support Group/Channel",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [

@@ -397,7 +397,7 @@ def innexia_about_callback(update, context):
                  ],
                  [
                     InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", callback_data="innexia_support"),
-                    InlineKeyboardButton(text="Cʀᴇᴅɪᴛ", callback_data="inmexia_credit"),
+                    InlineKeyboardButton(text="Cʀᴇᴅɪᴛ", callback_data="innexia_credit"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="innexia_back"),

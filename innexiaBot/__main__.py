@@ -387,20 +387,18 @@ def innexia_about_callback(update, context):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton(
-                            text="admin", callback_data="innexia_admin"
-                        ),
-                        InlineKeyboardButton(
-                            text="notes", callback_data="innexia_notes"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="support", callback_data="innexia_support"
-                        )
-                    ],
-                    [InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="innexia_back")],
+                 [
+                    InlineKeyboardButton(text="Admin", callback_data="innexia_admin"),
+                    InlineKeyboardButton(text="Notes", callback_data="innexia_notes"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Support", callback_data="innexia_support"),
+                    InlineKeyboardButton(text="Update", url="https://t.me/SiderzBot"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Back", callback_data="innexia_back"),
+                 
+                 ]
                 ]
             ),
         )

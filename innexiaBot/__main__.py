@@ -392,12 +392,12 @@ def innexia_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admin", callback_data="innexia_admin"),
-                    InlineKeyboardButton(text="Notes", callback_data="innexia_notes"),
+                    InlineKeyboardButton(text="Aᴅᴍɪɴ", callback_data="innexia_admin"),
+                    InlineKeyboardButton(text="Nᴏᴛᴇꜱ", callback_data="innexia_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="innexia_support"),
-                    InlineKeyboardButton(text="Update", url="https://t.me/SiderzBot"),
+                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", callback_data="innexia_support"),
+                    InlineKeyboardButton(text="Cʀᴇᴅɪᴛ", callback_data="inmexia_credit"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="innexia_back"),
@@ -409,7 +409,7 @@ def innexia_about_callback(update, context):
     elif query.data == "innexia_admin":
         query.message.edit_text(
             text=f"*Let's make your group bit effective now*"
-            f"\nCongragulations, Daisy now ready to manage your group."
+            f"\nCongragulations, Innexia now ready to manage your group."
             f"\n\n*Admin Tools*"
             f"\nBasic Admin tools help you to protect and powerup your group."
             f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -419,7 +419,7 @@ def innexia_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 Back", callback_data="innexia_basichelp")]]
+                [[InlineKeyboardButton(text="Back", callback_data="innexia_basichelp")]]
             ),
         )
 
@@ -431,23 +431,23 @@ def innexia_about_callback(update, context):
             f"\n\nYou can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 Back", callback_data="innexia_basichelp")]]
+                [[InlineKeyboardButton(text="Back", callback_data="innexia_basichelp")]]
             ),
         )
     elif query.data == "innexia_support":
         query.message.edit_text(
             text="* Innexia support chats*"
-            "\nClick [here](http://t.me/{dispatcher.bot.username}?startgroup=true) to add Amelia to your chat.",
+            "\nClick [here](http://t.me/{dispatcher.bot.username}?startgroup=true) to add Innexia to your chat.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Owner", url="t.me/useIes"),
-                    InlineKeyboardButton(text="Help", url="t.me/BotDevlopers"),
+                    InlineKeyboardButton(text="Lᴏɢ'ꜱ", url="t.me/InnexiaLogs"),
+                    InlineKeyboardButton(text="Fᴇᴅ", url="t.me/SiderzFedChat"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/SiderzChat"),
-                    InlineKeyboardButton(text="Update", url="https://t.me/SiderzBot"),
+                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/SiderzChat"),
+                    InlineKeyboardButton(text="Uᴘᴅᴀᴛᴇꜱ", url="https://t.me/SiderzBot"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="innexia_basichelp"),
@@ -456,28 +456,25 @@ def innexia_about_callback(update, context):
                 ]
             ),
         )
-    elif query.data == "innexia_aboutmanu_tac":
+    elif query.data == "innexia_credit":
         query.message.edit_text(
-            text=f"<b> ｢ Terms and Conditions 」</b>\n"
-            f"\n<i>To Use This Bot, You Need To Read Terms and Conditions Carefully.</i>\n"
-            f"\n✪ We always respect your privacy \n  We never log into bot's api and spying on you \n  We use a encripted database \n  Bot will automatically stops if someone logged in with api."
-            f"\n✪ Always try to keep credits, so \n  This hardwork is done by @Legend_Of_Universe spending many sleepless nights.. So, Respect it."
-            f"\n✪ Some modules in this bot is owned by different authors, So, \n  All credits goes to them \n  Also for <b>Paul Larson for Marie</b>."
-            f"\n✪ If you need to ask anything about \n  this bot, Go @{SUPPORT_CHAT}."
-            f"\n✪ If you asking nonsense in Support \n  Chat, you will get warned/banned."
-            f"\n✪ All api's we used owned by originnal authors \n  Some api's we use Free version \n  Please don't overuse AI Chat."
-            f"\n✪ We don't Provide any support to forks,\n  So these terms and conditions not applied to forks \n  If you are using a fork of Aɳαɳყα we are not resposible for anything."
-            f"\n\nFor any kind of help, related to this bot, Join @{SUPPORT_CHAT}."
-            f"\n\n<i>Terms & Conditions will be changed anytime</i>\n",
+            text=f"<b> CREDIT FOR INNEXIA DEV'S</b>\n"
+            f"\nHere Some Developers Helping in Making The Innexia Bot",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton(
-                            text="Credits", callback_data="innexia_aboutmanu_credit"
-                        ),
-                        InlineKeyboardButton(text="Back", callback_data="innexia_back"),
-                    ]
+                 [
+                    InlineKeyboardButton(text="Sᴀᴍᴍʏ", url="t.me/useIes"),
+                    InlineKeyboardButton(text="Bʟᴀᴢᴇ", url="t.me/piroXpower"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Iɴꜰɪɴɪᴛʏ", url="t.me/hell_king_infinity"),
+                    InlineKeyboardButton(text="Zᴀʟɪᴍ", url="https://t.me/Jalim_Munda"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Back", callback_data="innexia_basichelp"),
+                 
+                 ]
                 ]
             ),
         )

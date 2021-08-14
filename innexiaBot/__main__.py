@@ -218,14 +218,10 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "<b>I'm awake already!</b>"(
+            INNEXIA_IMG, caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
-            ),    
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Support", url="t.me/SiderzChat")]]
             ),
+            parse_mode=ParseMode.HTML,
         )
         
 

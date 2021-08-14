@@ -85,9 +85,9 @@ buttons = [
             text="❔Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅꜱ ❔", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="👥 Gʀᴏᴜᴘ", url=f"https://t.me/SiderzChat"),
+        InlineKeyboardButton(text="🔥 Sᴏᴜʀᴄᴇ", url=f"https://github.com/DarkCybers/innexia"),
         InlineKeyboardButton(
-            text="Cʜᴀɴɴᴇʟ 🔔", url=f"https://t.me/SiderzBot"
+            text="Vᴄ Pʟᴀʏᴇʀ 🎶", url=f"https://telegra.ph/Innexia-Vc-Player-08-14"
         ),
     ],
     [
@@ -356,7 +356,7 @@ def innexia_about_callback(update, context):
     query = update.callback_query
     if query.data == "innexia_":
         query.message.edit_text(
-            text=""" **INNEXIA A bot to manage your groups with additional features!**
+            text=""" <b> INNEXIA A bot to manage your groups with additional features!<b/>
             \nHere's the basic help regarding use of Innexia.
             
             \nAlmost all modules usage defined in the help menu, checkout by sending `/help`

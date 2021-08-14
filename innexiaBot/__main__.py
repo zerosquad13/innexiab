@@ -211,9 +211,8 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "[👋](https://telegra.ph/file/647cd4b88dad5350ad71d.gif)I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
-                uptime
-            ),
+            "<b>I'm awake already!</b>")
+                
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(

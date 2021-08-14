@@ -72,6 +72,7 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
+INNEXIA_IMG = "https://telegra.ph/file/8b6f8f2bb4ff3912634c7.jpg"
 
 PM_START_TEXT = """
 `Heya` 🤗 `I am` **INNEXIA** `your group super bot`
@@ -222,9 +223,11 @@ def start(update: Update, context: CallbackContext):
                 uptime
             ),
             parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/SiderzChat")]]
+            ),
         )
         
-
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
     # Log the error before we do anything else, so we can see it even if something breaks.

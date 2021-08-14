@@ -400,7 +400,7 @@ def innexia_about_callback(update, context):
                             text="support", callback_data="innexia_support"
                         )
                     ],
-                    [InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="aboutmanu_back")],
+                    [InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="innexia_back")],
                 ]
             ),
         )
@@ -417,7 +417,7 @@ def innexia_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 Back", callback_data="innexia_aboutmanu_tac")]]
+                [[InlineKeyboardButton(text="🔙 Back", callback_data="innexia_basichelp")]]
             ),
         )
 
@@ -429,7 +429,7 @@ def innexia_about_callback(update, context):
             f"\n\nYou can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 Back", callback_data="innexia_aboutmanu_spamrot")]]
+                [[InlineKeyboardButton(text="🔙 Back", callback_data="innexia_basichelp")]]
             ),
         )
     elif query.data == "innexia_support":
@@ -446,13 +446,16 @@ def innexia_about_callback(update, context):
                         InlineKeyboardButton(
                             text="Channel", url="t.me/SiderzBot"
                         ),
+                        InlineKeyboardButton(
+                            text="Channel", url="t.me/SiderzBot"
+                        ),
                     ],
                     [
                         InlineKeyboardButton(
                             text="Dev's", url="t.me/BotDevlopers"
                         )
                     ],
-                    [InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="innexia_back")],
+                    [InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="innexia_basichelp")],
                 ]
             ),
         )

@@ -432,10 +432,10 @@ def innexia_about_callback(update, context):
                 [[InlineKeyboardButton(text="🔙 Back", callback_data="innexia_aboutmanu_spamrot")]]
             ),
         )
-    elif query.data == "innexia_aboutmanu_spamprot":
+    elif query.data == "innexia_support":
         query.message.edit_text(
             text="* Innexia support chats*"
-            "\nClick [here](http://t.me/{dispatcher.bot.username}?startgroup=true) to add Amelia to your chat.
+            "\nClick [here](http://t.me/{dispatcher.bot.username}?startgroup=true) to add Amelia to your chat.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [

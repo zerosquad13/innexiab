@@ -91,9 +91,9 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="📜 Iɴꜰᴏʀᴍᴀᴛɪᴏɴ", callback_data="innexia_"),
+        InlineKeyboardButton(text="📜 Aʙᴏᴜᴛ", callback_data="innexia_"),
         InlineKeyboardButton(
-            text="Bᴀꜱɪᴄ Hᴇʟᴘ", callback_data="innexia_basichelp"
+            text="Bᴀꜱɪᴄ Hᴇʟᴘ 👮", callback_data="innexia_basichelp"
         ),
     ],
     [
@@ -218,7 +218,7 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_text(
+        update.effective_message.reply_photo(
             INNEXIA_IMG, caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
@@ -356,23 +356,24 @@ def innexia_about_callback(update, context):
     query = update.callback_query
     if query.data == "innexia_":
         query.message.edit_text(
-            text=""" **INNEXIA** it's online since 29 March 2021 and it's constantly updated!
-            \n**Bot Admins**
+            text=""" **INNEXIA - A bot to manage your groups with additional features!**
+            \nHere's the basic help regarding use of Innexia.
             
-            \n• @useIes, bot creator and main developer.
-            \n• The Doctor, server manager and developer.
-            \n• Manuel 5, developer.
-            \n**Support**
-            \n• [Click here](t.me/BotDevlopers) to consult the updated list of Official Supporters of the bot.
-            \n• Thanks to all our **donors** for supporting server and development expenses and all those who have reported bugs or suggested new features.
-            \n• We also thank **all the groups** who rely on our Bot for this service, we hope you will always like it: we are constantly working to improve it!""",
+            \nAlmost all modules usage defined in the help menu, checkout by sending `/help`
+            \nReport error/bugs click the Button""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                 [
-                    InlineKeyboardButton(text="Back", callback_data="innexia_back")
-                 ]
+                    [
+                        InlineKeyboardButton(
+                            text="Bᴜɢ'ꜱ", url="t.me/SiderzChat"
+                        ),
+                        InlineKeyboardButton(
+                            text="Bᴏᴛ Lɪꜱᴛ", url="t.me/SiderzBot/9"
+                        ),
+                    ],
+                    [InlineKeyboardButton(text="Back", callback_data="innexia_back")],
                 ]
             ),
         )
@@ -387,8 +388,8 @@ def innexia_about_callback(update, context):
 
     elif query.data == "innexia_basichelp":
         query.message.edit_text(
-            text=f"Here's basic Help regarding *How to use Me?*"
-            f"\n• Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
+            text=f"*Here's basic Help regarding* *How to use Me?*"
+            f"\n\n• Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
             f"\n• After adding promote me manually with full rights for faster experience.\n"
             f"\n• Than send `/admincache@InnexiaBot` in that chat to refresh admin list in My database.\n"
             f"\n\n*All done now use below given button's to know about use!*\n"

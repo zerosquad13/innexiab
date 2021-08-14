@@ -211,7 +211,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "<b>I'm awake already!</b>(
+            "<b>I'm awake already!</b>"(
                 uptime
             ),    
             parse_mode=ParseMode.MARKDOWN,
